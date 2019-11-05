@@ -1,0 +1,74 @@
+# include <iostream>
+# include <stdio.h>
+# include <graphics.h>
+# include <math.h>
+# include <conio.h>
+# include <dos.h>
+
+int main()
+{
+
+ int gdriver = DETECT, gmode, errorcode;
+ initgraph(&gdriver, &gmode, "c:\\tc\\bgi");
+ int i,yc=400;
+ for(i=100;i>=-400;i=i-2)
+ {
+  //Engine
+  setcolor(RED);
+  rectangle(425+i,370,515+i,400);
+  circle(450+i,yc,10);
+  circle(490+i,yc,10);
+
+  rectangle(470+i,350,515+i,370); //Driver's cabin
+
+  rectangle(440+i,362,450+i,370); //Smoke pipe
+
+  setcolor(BLACK);
+  line(470+i,370,515+i,370);
+  setcolor(BLUE);
+
+  //First car
+  rectangle(535+i,350,625+i,400);
+  circle(560+i,yc,10);
+  circle(600+i,yc,10);
+setcolor(YELLOW);
+{
+
+ line(515+i,382,535+i,382);
+}     //Connector between engine and car....
+setcolor(WHITE);
+  line(0,410,700,410);   //track
+  delay(10);
+
+  //Compromising for line in between wheels...
+  setcolor(BLACK);
+  line(440+i,yc,460+i,yc);
+  line(480+i,yc,500+i,yc);
+  line(550+i,yc,570+i,yc);
+  line(590+i,yc,610+i,yc);
+  setcolor(BLACK);
+  rectangle(535+i,350,625+i,400);
+  circle(560+i,yc,10);
+  circle(600+i,yc,10);
+setcolor(YELLOW);
+{
+
+ line(515+i,382,535+i,382);
+}     //Connector between engine and car....
+setcolor(WHITE);
+  line(0,410,700,410);   //track
+  delay(10);
+
+  //Compromising for line in between wheels...
+  setcolor(BLACK);
+  line(440+i,yc,460+i,yc);
+  line(480+i,yc,500+i,yc);
+  line(550+i,yc,570+i,yc);
+  line(590+i,yc,610+i,yc);
+  setcolor(BLACK);
+
+  clearviewport();
+ }
+
+ getch();
+}
